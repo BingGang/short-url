@@ -9,26 +9,7 @@ local redisKeyWhiteIp = "unite:app:white:ips"
 
 local reidsKey = ngx.var.uri
 
--- 从环境变量中尝试获取参数，若有定义则会覆盖
--- if os.getenv("ENV_REDIS_IP") ~= nil then
---     redisIp = os.getenv("ENV_REDIS_IP")
--- end
 
--- if os.getenv("ENV_REDIS_PASS") ~= nil then
---     redisPass = os.getenv("ENV_REDIS_PASS")
--- end
-
--- if os.getenv("ENV_REDIS_PORT") ~= nil then
---     redisPort = tonumber(os.getenv("ENV_REDIS_PORT"))
--- end
-
--- if os.getenv("ENV_REDIS_DB_INDEX") ~= nil then
---     redisDbIndex = tonumber(os.getenv("ENV_REDIS_DB_INDEX"))
--- end
-
--- if os.getenv("ENV_REDIS_KEY_WHITE_IPS") ~= nil then
---     redisKeyWhiteIp = os.getenv("ENV_REDIS_KEY_WHITE_IPS")
--- end
 
 -- 连接 redis
 local red = redis:new({
